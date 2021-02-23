@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 from keep_alive import keep_alive
 
-
 token = 'ODEyNzk5MTk2MTg4OTAxNDg4.YDGAPQ.csoHCo0FZu_eD61JnkOZaine3kA'
 
 client = discord.Client()
@@ -12,7 +11,6 @@ client = commands.Bot(command_prefix='<KS/>')
 async def on_ready():
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Kocham Skrypt"))
     print('Bot aktywny')
-
 
 @client.event
 async def on_message(message):
@@ -46,5 +44,4 @@ async def on_message(message):
             await member_object.send("[" + message.author.display_name + "]" + mod_message)
 
 keep_alive()
-
 client.run(token)
