@@ -13,6 +13,7 @@ async def on_ready():
     print('Bot aktywny')
 
 @client.event
+
 async def on_message(message):
     empty_array = []
     modmail_channel = discord.utils.get(client.get_all_channels(),
@@ -20,6 +21,7 @@ async def on_message(message):
 
     if message.author == client.user:
         return
+
     if str(message.channel.type) == "private":
         if message.attachments != empty_array:
             files = message.attachments
@@ -33,6 +35,7 @@ async def on_message(message):
     elif str(
             message.channel) == "dm-staff" and message.content.startswith("<"):
         member_object = message.mentions[0]
+
         if message.attachments != empty_array:
             files = message.attachments
             await member_object.send("[" + message.author.display_name + "]")
