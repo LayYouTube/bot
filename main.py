@@ -1,7 +1,7 @@
 import discord
 from keep_alive import keep_alive
 
-token = 'ODEyNzk5MTk2MTg4OTAxNDg4.YDGAPQ.csoHCo0FZu_eD61JnkOZaine3kA'
+token = 'TOKEN_HERE'
 
 client = discord.Client()
 
